@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @SpringBootTest
-public class ProdutoServiceTest {
+class ProdutoServiceTest {
 
     private final ProdutoService produtoService;
     private static ProdutoDTO produto = null;
@@ -35,19 +35,19 @@ public class ProdutoServiceTest {
     }
 
     @Test
-    public void shouldFindlAllWithProjector(){
+    void shouldFindlAllWithProjector(){
         assertEquals(produtoService.findAllProdutoUsingProjector().get(0).getNome(), produto.getNome());
         assertEquals(produtoService.findAllProdutoUsingProjector().get(0).getMarcaNome(), produto.getMarca().getNome());
     }
 
     @Test
-    public void shouldFindlAllWithCriteria(){
+    void shouldFindlAllWithCriteria(){
         assertEquals(produtoService.findAllProdutoUsingCriteria().get(0).getProdutoNome(), produto.getNome());
         assertEquals(produtoService.findAllProdutoUsingCriteria().get(0).getMarcaNome(), produto.getMarca().getNome());
     }
 
     @Test
-    public void shouldFindlAllWithNative(){
+    void shouldFindlAllWithNative(){
         assertEquals(produtoService.findAllProdutoUsingNative().get(0).getNome(), produto.getNome());
         assertEquals(produtoService.findAllProdutoUsingNative().get(0).getMarca().getNome(), produto.getMarca().getNome());
     }
