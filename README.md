@@ -1,2 +1,2 @@
 # hibernate-entity-dto-converter
-Converter resultado SQL para Entity ou DTO
+Converter Entity ou DTO / DTO para Entity
